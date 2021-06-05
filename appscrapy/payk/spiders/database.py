@@ -3,25 +3,12 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
 
-engine = create_engine('postgresql+psycopg2://odxxzyohipmskw:e9663c35f76f52bafd96b805f26514be1a7fa19a073ea32ca1e6748ae6d09d91@ec2-54-243-92-68.compute-1.amazonaws.com:5432/d47q8rljmhjuv2')
-Session = sessionmaker(bind=engine)
+engine = create_engine("postgresql+psycopg2://user:password@url:5432/dbname")
 conn = engine.connect()
 session= Session()
 
 
-# # metadata = MetaData()
-# # users_table = Table('zhabrcom', metadata,
-# #     Column('id', Integer, primary_key=True),
-# #     Column('url', String),
-# #     Column('title', String),
-# #     Column('image', String),
-# #     Column('created', String),
-# #     Column('author', String),
-# #     Column('decript', String)
-# # )
 
-
-# # metadata.create_all(engine)
 
 
 Base = declarative_base()
